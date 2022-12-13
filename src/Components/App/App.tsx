@@ -5,7 +5,12 @@ import Display from '../Display/Display';
 
 const App = () => {
   return (
-    <Header />
+    <main>
+      <Header />
+      <Display />
+      <Display />
+      <section className='bottom'></section>
+    </main>
   );
 }
 

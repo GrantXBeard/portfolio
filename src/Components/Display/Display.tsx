@@ -1,9 +1,32 @@
-import React from "react"
+import React, {useState} from "react"
 import './Display.css';
 
 const Display = () => {
+
+    const [isClicked, setIsClicked] = useState(false)
+
     return (
-        <h2>Display</h2>
+        <section className="display">
+            <h2 className="title" onClick={() => {
+                if (isClicked) {
+                    setIsClicked(false)
+                } else {
+                    setIsClicked(true)
+                }
+            }}>Display</h2>
+            {isClicked && <div className="image-bank">
+                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
+                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
+            </div>}
+        </section>
     )
 }
 
