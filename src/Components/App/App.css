@@ -1,1 +1,14 @@
+body {
+    font-family: 'Inter';
+}
 
+h1:hover, h3:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.bottom {
+    border-top: .1em;
+    border-color: black;
+    border-top-style: solid;
+}
