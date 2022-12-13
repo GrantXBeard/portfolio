@@ -7,8 +7,11 @@ const App = () => {
   return (
     <main>
       <Header />
-      <Display />
-      <Display />
+      <Display title='Collage'/>
+      <Display title='Photography'/>
+      <Display title='Sculpture'/>
+      <Display title='Mixed Media'/>
+      <Display title='Painting'/>
       <section className='bottom'></section>
     </main>
   );
