@@ -8,8 +8,11 @@ interface IModalProps {
 
 const Modal = ({ setShow, source }: IModalProps) => {
     return (
-        <div onClick={() => setShow(false)}>
-            <img src={source}/>
+        <div className="modal" onClick={() => setShow(false)}>
+            <div className="modal-content">
+                <img className="expanded" src={source}/>
+                <p>Content</p>
+            </div>
         </div>
     )
 }
