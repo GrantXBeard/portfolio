@@ -2,3 +2,8 @@ h1 {
     margin: 1em;
     margin-left: .6em;
 }
+
+.header {
+    display: flex;
+    align-items: center;
+}
