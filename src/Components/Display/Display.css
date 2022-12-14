@@ -10,12 +10,12 @@
 
 .image-bank {
     display: flex;
-    overflow: auto;
+    overflow: scroll;
     margin-bottom: 1em;
     padding-right: 1em;
 }
 
 .thumbnail {
-    width: 15em;
+    height: 40vh;
     margin-left: 1em;
 }

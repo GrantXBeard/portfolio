@@ -1,13 +1,19 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import './Display.css';
+import { IWorkData } from '../../Types/PortfolioTypes';
 
 interface IDisplayProps {
     title: string
+    work: IWorkData[]
 }
 
-const Display = ({ title }: IDisplayProps) => {
+const Display = ({ title, work }: IDisplayProps) => {
 
     const [isClicked, setIsClicked] = useState(false)
+
+    const thumbnails = work.map(each => {
+        return <img className="thumbnail" src={each.img}/>
+    })
 
     return (
         <section className="display">
@@ -19,16 +25,7 @@ const Display = ({ title }: IDisplayProps) => {
                 }
             }}>{title}</h3>
             {isClicked && <div className="image-bank">
-                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/MhNTKgb/IMG-3095-Large.jpg"/>
-                <img className="thumbnail" src="https://i.ibb.co/K0L0FmB/IMG-3226-Large.jpg"/>
+                {thumbnails}
             </div>}
         </section>
     )
