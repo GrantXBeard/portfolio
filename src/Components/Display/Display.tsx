@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react"
 import './Display.css';
 import { IWorkData } from '../../Types/PortfolioTypes';
+import Image from '../Image/Image';
+
 
 interface IDisplayProps {
     title: string
@@ -12,7 +14,7 @@ const Display = ({ title, work }: IDisplayProps) => {
     const [isClicked, setIsClicked] = useState(false)
 
     const thumbnails = work.map(each => {
-        return <img className="thumbnail" src={each.img}/>
+        return <Image source={each.img} key={each.id}/>
     })
 
     return (
