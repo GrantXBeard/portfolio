@@ -2,7 +2,7 @@ body {
     font-family: 'Inter';
 }
 
-h1:hover, h3:hover {
+h3:hover {
     color: red;
     cursor: pointer;
 }
