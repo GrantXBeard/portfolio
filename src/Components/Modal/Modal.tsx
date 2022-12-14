@@ -1,9 +1,16 @@
 import React from "react";
 import './Modal.css'
 
-const Modal = () => {
+interface IModalProps {
+    setShow: React.Dispatch<React.SetStateAction<boolean>>;
+    source: string
+}
+
+const Modal = ({ setShow, source }: IModalProps) => {
     return (
-        <div>Modal</div>
+        <div onClick={() => setShow(false)}>
+            <img src={source}/>
+        </div>
     )
 }
 
