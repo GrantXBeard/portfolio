@@ -12,7 +12,9 @@
   }
 
   .modal-content {
-    padding: 1em;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-right: 1em;
     border-color: black;
     border-style: solid;
     background-color: white;
@@ -23,4 +25,5 @@
 
   .expanded {
     height: 30rem;
+    margin-bottom: -6px;
 }

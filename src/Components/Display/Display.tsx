@@ -14,7 +14,7 @@ const Display = ({ title, work }: IDisplayProps) => {
     const [isClicked, setIsClicked] = useState(false)
 
     const thumbnails = work.map(each => {
-        return <Image source={each.img} key={each.id}/>
+        return <Image source={each.img} key={each.id} description={each.description}/>
     })
 
     return (
