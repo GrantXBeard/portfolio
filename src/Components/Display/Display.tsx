@@ -14,7 +14,22 @@ const Display = ({ title, work }: IDisplayProps) => {
     const [isClicked, setIsClicked] = useState(false)
 
     const thumbnails = work.map(each => {
-        return <Image source={each.img} key={each.id}/>
+        let color = ''
+        if (each.type === 'collage') {
+            color = 'green'
+        } else if (each.type === 'photography') {
+            color = 'pink'
+        } else if (each.type === 'sculpture') {
+            color = 'yellow'
+        } else if (each.type === 'mixed media') {
+            color = 'red'
+        } else if (each.type === 'painting') {
+            color = 'brown'
+        } else if (each.type === 'drawing') {
+            color = 'blue'
+        }
+
+        return <Image source={each.img} key={each.id} description={each.description} color={color}/>
     })
 
     return (

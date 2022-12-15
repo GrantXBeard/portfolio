@@ -1,4 +1,35 @@
 .thumbnail {
-    height: 40vh;
-    margin-left: 1em;
+    height: 15rem;
 }
+
+.opacity {
+    opacity: 0.5;
+}
+
+.overlay-red {
+    background-color: red
+}
+
+.overlay-yellow {
+    background-color: yellow
+}
+
+.overlay-pink {
+    background-color: pink
+}
+
+.overlay-blue {
+    background-color: blue
+}
+
+.overlay-green {
+    background-color: green
+}
+
+.overlay-brown {
+    background-color: brown;
+}
+
+ .img-wrapper {
+    margin-left: 1em;
+ }
