@@ -24,7 +24,7 @@ const Display = ({ title, work }: IDisplayProps) => {
         } else if (each.type === 'mixed media') {
             color = 'red'
         } else if (each.type === 'painting') {
-            color = 'brown'
+            color = 'black'
         } else if (each.type === 'drawing') {
             color = 'blue'
         }
