@@ -1,5 +1,5 @@
 .thumbnail {
-    height: 15rem;
+    height: 15em;
 }
 
 .opacity {
@@ -26,8 +26,8 @@
     background-color: green
 }
 
-.overlay-brown {
-    background-color: brown;
+.overlay-black {
+    background-color: black;
 }
 
  .img-wrapper {

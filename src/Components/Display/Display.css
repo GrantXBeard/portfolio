@@ -9,8 +9,10 @@
 }
 
 .image-bank {
+    overflow-y: hidden;
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
     margin-bottom: 1em;
     padding-right: 1em;
+    height: 15em;
 }
