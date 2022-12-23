@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css';
+import { Link } from 'react-router-dom'
 
 interface IHeaderProps {
     setShow: React.Dispatch<React.SetStateAction<boolean>>
@@ -7,16 +8,39 @@ interface IHeaderProps {
 }
 
 const Header = ({ setShow, show }: IHeaderProps) => {
+
+    const setButtonChoice = () => {
+        let button
+        if (show) {
+            button = '-'
+        } else {
+            button = '+'
+        }
+        return button
+    }
+
+    const setRoute = () => {
+        let route
+        if (!show) {
+            route = 'bio'
+        } else {
+        route = ''
+        }
+        return route
+    }
+
     return (
         <div className='header'>
             <h1>Grant X Beard</h1>
-            <h3 onClick={() => {
-                if (show) {
-                    setShow(false)
-                } else {
-                    setShow(true)
-                }
-            }}>+</h3>
+            <Link to={`/${setRoute()}`}>
+                <h3 onClick={() => {
+                    if (show) {
+                        setShow(false)
+                    } else {
+                        setShow(true)
+                    }
+                }}>{setButtonChoice()}</h3>
+            </Link>
         </div>
     )
 }
