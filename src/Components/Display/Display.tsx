@@ -29,7 +29,7 @@ const Display = ({ title, work }: IDisplayProps) => {
             color = 'blue'
         }
 
-        return <Image source={each.img} key={each.id} description={each.description} color={color}/>
+        return <Image source={each.img} id={each.id} key={each.id} description={each.description} color={color} type={each.type}/>
     })
 
     return (

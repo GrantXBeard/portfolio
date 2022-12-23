@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Display from '../Display/Display';
 import Bio from '../Bio/Bio';
 import { IWorkData } from '../../Types/PortfolioTypes';
+import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
 
