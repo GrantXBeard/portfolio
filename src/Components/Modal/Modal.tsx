@@ -12,7 +12,7 @@ const Modal = ({ setShow, source, description }: IModalProps) => {
         <div className="modal" onClick={() => setShow(false)}>
             <div className="modal-content">
                 <img className="expanded" src={source}/>
-                <p>{description}</p>
+                <p className="description">{description}</p>
             </div>
         </div>
     )
