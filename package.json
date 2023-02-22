@@ -21,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,9 +46,5 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   },
-  "homepage": "https://<username>.github.io/<repository-name>",
-  "scripts": {
-   "predeploy": "npm run build",
-   "deploy": "gh-pages -d build"
-}
+  "homepage": "https://GrantXBeard.github.io/portfolio"
 }
